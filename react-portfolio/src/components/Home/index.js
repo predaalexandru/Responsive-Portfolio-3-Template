@@ -1,6 +1,7 @@
 import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+import Logo from './Logo'
 
 import { Link } from 'react-router-dom'
 
@@ -26,7 +27,7 @@ const Home = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            setLetterClass('text-animate-hover')
+            return setLetterClass('text-animate-hover')
         }, 4000)
     }, [])
     return (
@@ -51,6 +52,7 @@ const Home = () => {
                 <h2>Frontend Developer</h2>
                 <Link to="/contact" className='contact-button'>CONTACT ME</Link>
             </div>
+            <Logo />
         </div>
     )
 }
